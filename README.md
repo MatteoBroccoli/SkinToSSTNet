@@ -12,6 +12,7 @@ The network receives five input features, which must be given in the following o
 5. longitude grid
 
 and it outputs only one field of temperature:
+
 6. SST
 
 As described in the paper, the datasets used for training are the followings:
