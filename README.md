@@ -29,7 +29,7 @@ Training was performed on diurnal retrievals only, so that from the satellite me
 Anomalies were computed over the training dataset, i.e. the mean states of the training set was subtracted to each input and output feature, and the data was then scaled to the range [0,1].
 To use the network, it is essential to reproduce these steps.
 To this end, mean values of our training dataset can be found on **zenodo** in the directory `preprocessing_setup`, together with `min` and `max` values.
-The data can then be scaled with the following function
+The data can then be scaled to [0,1] for instance with the following function
 ```
 def scaling(data, min, max):
     return (data - min)/(max - min)
@@ -58,7 +58,7 @@ To convert the network predictions back to Celsius degree, use
 def undo_scaling(data, min, max):
     return data*(max - min) + min
 ```
-and then add the corresponding (subskin or SST) mean value.
+and then add the corresponding (subskin or SST) mean value to obtain the full field.
 
 
 
