@@ -24,7 +24,7 @@ As described in the paper, the datasets used for training are the followings:
 6. ESA SST CCI and C3S [https://doi.org/10.48670/moi-00169](https://doi.org/10.48670/moi-00169)
 
 ## Preprocessing
-The input and output fields have dimension (720, 1440), so that the datasets must be downsampled to 0.25 degree resolution.
+The network input shape is (720, 1440, 5), so that the datasets must be downsampled to 0.25 degree resolution.
 Training was performed on diurnal retrievals only, so that from the satellite measurements only the one obtained during daytime are to be kept.
 Anomalies were computed over the training dataset, i.e. the mean states of the training set was subtracted to each input and output feature, and the data was then scaled to the range [0,1].
 To use the network, it is essential to reproduce these steps.
