@@ -27,7 +27,7 @@ The network input shape is (720, 1440, 5), so that the datasets must be downsamp
 Training was performed on diurnal retrievals only, so that from the satellite measurements only the one obtained during daytime are to be kept.
 Anomalies were computed over the training dataset, i.e. the mean states of the training set was subtracted to each input and output feature, and the data was then scaled to the range [0,1].
 To use the network, it is essential to reproduce these steps.
-To this end, mean values of our training dataset can be found on **zenodo** in the directory `preprocessing_setup`, together with `min` and `max` values.
+To this end, mean values of our training dataset can be found on [10.5281/zenodo.11520481](https://zenodo.org/doi/10.5281/zenodo.11520481) in the directory `preprocessing_setup`, together with `min` and `max` values.
 The data can then be scaled to [0,1] for instance with the following function
 ```
 def scaling(data, min, max):
@@ -36,7 +36,7 @@ def scaling(data, min, max):
 
 ## Network predictions
 The network can be used to project the subskin SST to first level SST (forward network), or also first level SST to subskin SST (inverse network).
-For both cases, we provide pre-trained weights of the network on **zenodo**, in the directories `forward_network_weights` and `inverse_network_weights` respectively.
+For both cases, we provide pre-trained weights of the network on [10.5281/zenodo.11520481](https://zenodo.org/doi/10.5281/zenodo.11520481), in the directories `forward_network_weights` and `inverse_network_weights` respectively.
 After downloading the weights, they can be loaded as follows:
 ```
 # load pre-trained weights
